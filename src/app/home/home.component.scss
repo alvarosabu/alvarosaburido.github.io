@@ -1,0 +1,37 @@
+/*------------------------------------*\
+    $Home
+\*------------------------------------*/
+
+@import '../../styles/_variables.scss';
+
+.header {
+  justify-content: center;
+}
+.home-container {
+  margin-top:  -5rem;
+}
+.card {
+  &--illustration__img {
+    background-color: transparent !important;
+  }
+  &__title {
+    text-transform: none;
+  }
+  &__stats {
+    border-top: none !important;
+  }
+  &__stat {
+    width: 33%;
+  }
+  &__stat:not(:last-child) {
+    border-right: 1px solid $gray-light;
+  }
+}
+.stat {
+ 
+  &__value {
+    font-size: 54px !important;
+    font-weight: 100 !important;
+    color: lighten($brand-primary, 5%) !important;
+  }
+}

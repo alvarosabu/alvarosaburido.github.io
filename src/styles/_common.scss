@@ -1,0 +1,9 @@
+@import '../styles/_variables.scss';
+// Navbar
+
+.navbar {
+    &--dark {
+        background: $gray-dark;
+        color: $white;
+    }
+}

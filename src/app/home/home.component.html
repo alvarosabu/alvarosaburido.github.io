@@ -1,0 +1,45 @@
+
+  <div class="header">
+    <img src="/assets/svg/as-portfolio.svg" alt="">
+  </div>
+  <div
+  class="container-fluid wrap home-container"
+  fxLayout="row"
+  fxLayoutAlign="start start"
+  fxLayoutWrap >
+      <div
+      class="box"
+      fxFlex="100">
+        <as-card
+            [customClass]="'card--stats'"
+            [shadow]="1">
+             <div class="card__content">
+                <div class="card__stats">
+                  <div 
+                  class="card__stat"
+                  *ngFor="let stat of githubStats">
+                      <span 
+                      class="stat__value">{{stat.value }}
+                      </span>
+                      <span class="stat__line"></span>
+                      <span class="stat__label">{{stat.label}}</span>
+                  </div>
+                </div>
+             </div>
+        </as-card>
+      </div>
+      <div
+          class="box"
+          fxFlexAlign="start"
+          fxFlex="100"
+          fxFlex.gt-sm="33"
+          *ngFor="let repo of repositories">
+            <as-card-illustration
+                [customClass]="'card--repo'"
+                [title]="repo.name"
+                [img]="'https://s3-eu-west-1.amazonaws.com/as-projects-assets/'+ repo.name +'/'+repo.name+'.svg'"
+                [shadow]="1">
+                <div class="card__content"></div>
+            </as-card-illustration>
+      </div>
+  </div>

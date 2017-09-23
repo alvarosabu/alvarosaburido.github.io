@@ -1,0 +1,51 @@
+/* =============================================================================
+   				Theme Settings
+   ========================================================================== */
+
+$font-family-base:  "Roboto", sans-serif !default;
+$icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
+// Paper 3.3.7
+// Variables
+// --------------------------------------------------
+
+
+//== Colors
+//
+//## Gray and brand colors for use across Bootstrap.
+
+$gray-base:              #000 !default;
+$gray-darker:            lighten($gray-base, 13.5%) !default; // #222
+$gray-dark:              #1F2223 !default;
+$gray:                   #666 !default;
+$gray-light:             #D8D8D8 !default;
+$gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
+$white:                  #FDFDFD !default;
+
+$brand-app:             #868DAD !default;
+$brand-primary:         #868DAD !default;
+$brand-secondary:       #B2FFD6 !default;
+$brand-ternary:         #05A8AA !default;
+
+$brand-success:         #05A8AA !default;
+$brand-info:            #9C27B0 !default;
+$brand-warning:         #ff9800 !default;
+$brand-danger:          #E4572E !default;
+$brand-sidebar:         #234765 !default;
+
+//== Sidebar
+//
+//##
+
+$sidebar-bg: darken($brand-app, 4%) !default;
+$sidebar-width: 250px !default;
+$sidebar-min-width: $sidebar-width !default;
+$sidebar-profile-height: 200px !default;
+$sidebar-profile-bg: url('../../../assets/img/arena-bg.jpg') !default;
+$sidebar-avatar-border-radius: 50%;
+
+// Ngx- Canaima
+$as-card-illustration-height: 200px;
+$as-card-illustration-border-radius: none;
+$as-card-header-border-top: 5px solid ;
+$as-card-header-border-color: $brand-primary;
+$as-header-bg: lighten($brand-primary, 5%);
