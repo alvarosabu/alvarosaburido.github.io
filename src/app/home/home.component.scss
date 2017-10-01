@@ -35,3 +35,26 @@
     color: lighten($brand-primary, 5%) !important;
   }
 }
+
+.repo {
+  &__title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    h3 {
+      font-size: 18px;
+      color: $brand-primary ;
+    }
+    .badge {
+      padding: .5rem 1rem;
+      font-size: 16px;
+      border-radius: 50px;
+    }
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+  }
+}

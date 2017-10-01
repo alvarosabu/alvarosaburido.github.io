@@ -78,4 +78,10 @@ export class HomeComponent implements OnInit {
       this.repositories = repositories;
     });
   }
+  /**
+   * goToRepoUrl
+   */
+  public goToRepoUrl(url: string) {
+    window.location.href = url;
+  }
 }
