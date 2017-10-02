@@ -1,0 +1,18 @@
+@import '../styles/_variables.scss';
+// Navbar
+
+.navbar {
+    &--dark {
+        background: $gray-dark;
+        color: $white;
+    }
+}
+@include badge(default,$gray-light,$gray);
+@include badge(primary,$btn-primary-bg,$btn-primary-color);
+@include badge(secondary,$brand-secondary,$btn-secondary-color);
+@include badge(ternary,$brand-ternary,$btn-ternary-color);
+@include badge(success,$btn-success-bg,$btn-success-color);
+@include badge(info,$btn-info-bg,$btn-info-color);
+@include badge(warning,$btn-warning-bg,$btn-warning-color);
+@include badge(danger,$btn-danger-bg,$btn-danger-color);
+@include badge(link,#fff,$btn-default-color);
