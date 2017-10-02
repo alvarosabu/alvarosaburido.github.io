@@ -1,57 +1,95 @@
-
-  <div class="header">
-    <img src="/assets/svg/as-portfolio.svg" alt="">
-  </div>
-  <div
-  class="container-fluid wrap home-container"
+<div class="header">
+  <img 
+  fxHide
+  fxShow.gt-sm
+  src="/assets/svg/as-portfolio.svg" alt="">
+</div>
+<section
+  class="container-fluid wrap repos-section"
+  id="repositories"
   fxLayout="row"
   fxLayoutAlign="start start"
   fxLayoutWrap >
-      <div
-      class="box"
-      fxFlex="100">
-        <as-card
-            [customClass]="'card--stats'"
-            [shadow]="1">
-             <div class="card__content">
-                <div class="card__stats">
-                  <div 
-                  class="card__stat"
-                  *ngFor="let stat of githubStats">
-                      <span 
-                      class="stat__value">{{stat.value }}
-                      </span>
-                      <span class="stat__line"></span>
-                      <span class="stat__label">{{stat.label}}</span>
-                  </div>
-                </div>
-             </div>
-        </as-card>
-      </div>
-      <div
-          class="box"
-          fxFlexAlign="start"
-          fxFlex="100"
-          fxFlex.gt-sm="33"
-          *ngFor="let repo of repositories">
-            <as-card-illustration
-                [customClass]="'card--repo repo'"
-                
-                [img]="'https://s3-eu-west-1.amazonaws.com/as-projects-assets/'+ repo.name +'/'+repo.name+'.svg'"
-                [shadow]="1">
-                <div class="card__content">
-                  <div class="repo__title">
-                    <h3>{{repo.name}} </h3>
-                    <span class="badge badge-success">{{repo.version}}</span>
-                    <span class="badge badge-default">
-                      <i class="mdi mdi-star"></i> {{repo.stargazers_count}}
+    <div
+    class="box"
+    fxHide
+    fxShow.gt-sm
+    fxFlex="100">
+      <as-card
+          [customClass]="'card--stats'"
+          [shadow]="1">
+            <div class="card__content">
+              <div class="card__stats">
+                <div 
+                class="card__stat"
+                *ngFor="let stat of githubStats">
+                    <span 
+                    class="stat__value">{{stat.value }}
                     </span>
-                  </div>
-                  <div class="repo__footer">
-                    <div class="repo__type">{{repo.language}}</div>
-                    <button class="btn btn-primary" (click)="goToRepoUrl(repo.html_url)"> See more...</button>
-                  </div>
+                    <span class="stat__line"></span>
+                    <span class="stat__label">{{stat.label}}</span>
                 </div>
-            </as-card-illustration>
+              </div>
+            </div>
+      </as-card>
+    </div>
+    <div
+        class="box"
+        fxFlexAlign="start"
+        fxFlex="100"
+        fxFlex.gt-sm="33"
+        *ngFor="let repo of repositories | sortBy: 'id'">
+          <as-card-illustration
+              [customClass]="'card--repo repo'"
+              
+              [img]="'https://s3-eu-west-1.amazonaws.com/as-projects-assets/'+ repo.name +'/'+repo.name+'.svg'"
+              [shadow]="1">
+              <div class="card__content">
+                <div class="repo__title">
+                  <h3>{{repo.name}} </h3>
+                  <span class="badge badge-success">{{repo.version}}</span>
+                  <span class="badge badge-default">
+                    <i class="mdi mdi-star"></i> {{repo.stargazers_count}}
+                  </span>
+                </div>
+                <div class="repo__footer">
+                  <div class="repo__type">
+                      <i class="mdi mdi-circle"
+                      *ngIf="repo.language"></i>
+                      {{repo.language}}</div>
+                  <button class="btn btn-primary" (click)="goToRepoUrl(repo.html_url)"> See more...</button>
+                </div>
+              </div>
+          </as-card-illustration>
+    </div>
+</section>
+<section class="about-section" id="about">
+  <div 
+  class="about container-fluid wrap"
+  fxLayout="row"
+  fxLayoutAlign="start center"
+  fxLayoutWrap >
+    <div
+    fxFlex="100"
+    fxLayoutAlign="center start"
+    fxFlex.gt-sm="50">
+      <div class="about__avatar shadow-1"
+      [ngStyle]="{'background-image': user?.avatarUrl && 'url(' + user?.avatarUrl + ')'}"></div>
+    </div>
+    <div
+    fxFlex="100"
+    fxLayoutAlign="center start"
+    fxFlex.gt-sm="50">
+      <div class="about__specs">
+        <h3>About</h3>
+        <p>{{user?.bio}}</p>
       </div>
+    </div>
+    
   </div>
+</section>
+<div class="footer">
+  <div class="wrap container-fluid">
+    <p>Powered by Github <i class="mdi mdi-heart"></i> and Angular 4+</p>
+  </div>
+</div>

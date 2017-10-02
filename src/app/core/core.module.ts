@@ -1,8 +1,10 @@
+import { SortByPipe } from './misc/sortby.pipe';
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { Ng2PageScrollModule } from 'ng2-page-scroll';
 import { throwIfAlreadyLoaded } from './module-import-guard';
 import { FormatService } from './misc/format.service';
 import { MiscService } from './misc/misc.service';
@@ -25,6 +27,7 @@ import { GithubService } from './github.service';
         HomeModule,
         ToastyModule,
         Ng2BootstrapModule.forRoot(),
+        Ng2PageScrollModule
     ],
     exports: [
         CommonModule,
@@ -35,7 +38,8 @@ import { GithubService } from './github.service';
         NavbarModule,
         HomeModule,
         ToastyModule,
-        Ng2BootstrapModule
+        Ng2BootstrapModule,
+        Ng2PageScrollModule,
     ],
     declarations: [
     ],

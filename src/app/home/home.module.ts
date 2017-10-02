@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import {
   RouterModule,
@@ -10,7 +11,6 @@ import { SharedModule } from '../shared/shared.module';
     imports: [
         SharedModule,
         RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules })
-
     ],
     exports: [
         HomeComponent

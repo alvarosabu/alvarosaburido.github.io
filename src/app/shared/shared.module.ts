@@ -1,3 +1,4 @@
+import { SortByPipe } from './../core/misc/sortby.pipe';
 import { NgModule } from '@angular/core';
 import {
     CommonModule
@@ -40,9 +41,12 @@ export function createTranslateLoader(http: HttpClient) {
         FormsModule,
         HttpClientModule,
         FlexLayoutModule,
-        NgxCanaimaModule
+        NgxCanaimaModule,
+        SortByPipe
     ],
-    declarations: [],
+    declarations: [
+        SortByPipe
+    ],
     providers: [],
 })
 export class SharedModule { }

@@ -39,19 +39,28 @@ export class NavService {
                 this.navList = [
                     new Nav({
                         _id: '1',
-                        title: 'Home',
-                        slugName: 'home',
+                        title: 'Repositories',
+                        slugName: 'repositories',
                         prefix: 'mdi',
-                        icon: 'home',
+                        icon: 'repositories',
                         open: false,
-                        sub: false
+                        sub: false,
                     }),
                     new Nav({
                         _id: '2',
-                        title: 'Cards',
-                        slugName: 'cards',
+                        title: 'About',
+                        slugName: 'about',
                         prefix: 'mdi',
-                        icon: 'cards',
+                        icon: 'about',
+                        open: false,
+                        sub: false,
+                    }),
+                    new Nav({
+                        _id: '3',
+                        title: 'Portfolio',
+                        slugName: 'portfolio',
+                        prefix: 'mdi',
+                        icon: 'portfolio',
                         open: false,
                         sub: false
                     })

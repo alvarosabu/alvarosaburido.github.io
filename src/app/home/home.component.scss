@@ -3,14 +3,23 @@
 \*------------------------------------*/
 
 @import '../../styles/_variables.scss';
-
+@import '../../styles/_mixins.scss';
 .header {
   justify-content: center;
+  @include breakpoint('reverse-epsilon') {
+    height: 150px;
+  }
 }
-.home-container {
+.repos-section {
   margin-top:  -5rem;
+  min-height: 700px;
+  overflow: scroll;
 }
 .card {
+  &--repo {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
   &--illustration__img {
     background-color: transparent !important;
   }
@@ -57,4 +66,66 @@
     display: flex;
     justify-content: space-between;
   }
+  &__type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    i {
+      color: $brand-primary;
+      margin-right: 1rem;
+    }
+  }
+}
+.about-section {
+  height: 600px;
+  background: darken($gray-lighter, 3%);
+  @include breakpoint('reverse-epsilon') {
+    height: 400px;
+  }
+}
+.about {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  &__avatar {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background-size: cover;
+    @include breakpoint('reverse-epsilon') {
+      height: 150px;
+      width: 150px;
+    }
+  }
+  &__specs {
+    height: 300px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    h3 {
+      text-transform: uppercase;
+      color: $brand-primary;
+      margin-bottom: 3rem;
+      font-size: 48px;
+      @include breakpoint('reverse-epsilon') {
+        font-size: 24px;
+      }
+    }
+    p {
+      font-size: 18px;
+      @include breakpoint('reverse-epsilon') {
+        font-size: 14px;
+      }
+
+    }
+  }
+}
+.footer {
+  height: 50px;
+  padding: 1rem;
+  background: $brand-primary;
+  color: lighten($brand-primary, 9%);
+
 }
