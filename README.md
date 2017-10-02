@@ -1,4 +1,4 @@
-![repository-banner.png](https://s3-eu-west-1.amazonaws.com/asaburido/as-readme-banner.png?response-content-disposition=inline&X-Amz-Security-Token=FQoDYXdzEBQaDMZEaqmb3GlZRSkgHCL%2BAZdW97gU6Drl6jxEoXc5%2BxOPlt5fpqSNpw0dhdWlyPU1fPEiG1ic7Y69e7VUTLpNrjckuLYJghWnXECt1HjrbQzEjiZPpvpcCjAKOh0qE5jmiSt8pU0TO07whMK5lafLPVFqIG3LT5nz%2BNVrEwH9giJjMSq803sXzyOHOrumepDnclkMhV6UPnuwhIoJN3%2F7%2BCif6y8JF%2FP3DLYiKKoIWrFinh0kJc1VJKoqm5cxEFD1UAY7wlyZ6uCZeCoNyGrOinkKbRiQ0IC0TZEAU%2B%2Bvrk%2Fss2ffmEfSFMkuKqqjsbwq07pvC0sZOz39HBTnD328tfGofKz%2B229frprckh6SKOP1mM4F&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20170923T104516Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAJLCBG73KHZPNUXGQ%2F20170923%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Signature=db4daacb1a2fed322e72b08b27ee1ccca3d787ffc6b007104a164485e1bd2a77)
+![repository-banner.png](https://s3-eu-west-1.amazonaws.com/asaburido/as-readme-banner.png)
 
 ## Software version ##
 * ```node -v```  : v8.4.0
